@@ -5,5 +5,6 @@ from . import views
 # create your app urls here
 
 urlpatterns = [
-   path('', views.base, name="homepage")
+   path('', views.homepage, name="homepage"),
+   path('basedir/', views.base, name='base page')
 ]

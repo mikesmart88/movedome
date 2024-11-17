@@ -1,0 +1,28 @@
+{% extends 'moviedomeapp/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block metadata %}
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    <title> {% block title %} MovieDome Global Movie & Series Blog | Global Developers {% endblock %} </title>
+</head>
+<body>
+    
+    {% block content %}
+
+    <!--{% if movie_trend %}
+
+    {% for i in movie_trend %}
+
+    {{i.movie_name}}
+
+    {% endfor %}
+
+    {% endif %}-->
+    {% endblock %} 
+</body>
+</html>
