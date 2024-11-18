@@ -38,7 +38,6 @@
     color: var(--text-color);
     /* background-color: var(--text-color); */
     box-sizing: border-box;
-    overflow: hidden;
   }
   .fixed_header{
     height: 80px;
@@ -48,8 +47,6 @@
     display: flex;
     background-color:transparent;
     box-sizing: border-box;
-    overflow: hidden;
-    position: fixed;
   }
   
   .fixed_header > header {
@@ -64,7 +61,6 @@
     background-color: var(--tertiary-color);
     text-transform: capitalize;
     box-sizing: border-box;
-    overflow: hidden;
   }
   .logo{
     position: relative;
@@ -330,10 +326,153 @@
   }
   .active{
     width: 100%;
-    min-height: 100vh;
     height: fit-content;
+    min-height: 80vh;
+  }
+
+  #search-sect {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    gap: .4rem;
+    height: 150px;
+    background-color: var(--botton-color);
+    width: 100%;
+    cursor: pointer;
     box-sizing: border-box;
   }
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 600px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    font-size: larger;
+    border: 0;
+    outline: 0;
+    padding: 0rem 1rem;
+    background: transparent;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+  }
+  input:focus{
+    outline: 1px solid var(--tertiary-color);
+    border-radius: .4rem;
+  }
+  .search-icon2{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+  }
+  #search2{
+    display: block;
+    position: relative;
+    background-color: var(--tertiary-color);
+    box-shadow: 0px 0px 10px var(--tertiary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: .3rem;
+    border: 0;
+    outline: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  ::placeholder {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-color);
+  }
+
+  .trending {
+    display: block;
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .trending header {
+    display: flex;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+  }
+
+  .scrool_body{
+    padding: 20px;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    color: var(--text-color);
+  }
+  .scrool_to{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    animation: scroolimage 20s 0s infinite forwards linear;
+    transition: 8s;
+  }
+  @keyframes scroolimage {
+    from{
+       transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(-1000px);
+    }
+  }
+  .scrool_body::-webkit-scrollbar{
+    display: none;
+  }  
+
+  .image_older{
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+  }
+  .image{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .caption{
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+    'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  /* footer */
   .footer-content {
     display: flex;
     align-items: center;
@@ -374,6 +513,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .fnav_link a{
@@ -450,3 +590,31 @@ footer{
         height: 25px;
     }
   }
+  @media screen and (max-width:590px) {
+    .fnav_link a{
+        font-size: 10px;
+    }
+    .copy{
+        font-size: 10px;
+    }
+    .search-container{
+        width: 350px !important;
+    }
+    ::placeholder{
+        font-size: 0.8rem;
+    }
+    input{
+        font-size: 0.8rem;
+    }
+    .search-icon2 button{
+        font-size: 13px !important;
+    }
+    .trending header{
+        height: 40px;
+    }
+  }
+@media screen and (max-width:280px) {
+    ::placeholder{
+        font-size: 0.3rem !important;
+    }
+}

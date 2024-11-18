@@ -1,0 +1,44 @@
+{% extends 'moviedomeapp/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block metadata %}
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MovieDome - Explore trending movies, series, and multiple colections of entertainments, comedies, animations and more." /> 
+<link rel="canonical" href="https://moviedome.com{{request.path_info}}" />               
+<meta property="og:site_name" content="MovieDome" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MovieDome - Japanese" />
+<meta property="og:description" content="MovieDome - Explore trending movies, series, and multiple colections of entertainments, comedies, animations and more." />
+<meta property="og:image" content="https://{% static '' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://moviedome.com{{request.path_info}}" />
+<meta name="twitter:site" content="@MovieDome" />
+<meta name="twitter:title" content="MovieDome - Japanese" />
+<meta name="twitter:description" content="MovieDome - Explore trending movies, series, and multiple colections of entertainments, comedies, animations and more." />
+<meta name="twitter:creator" content="@Moviedome" />
+<meta name="twitter:image" content="https://moviedome.com{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="moviedome logo" />
+    {% endblock %}
+    <title> {% block title %} MovieDome - Japanese {% endblock %} </title>
+</head>
+<body>
+    
+    {% block content %}
+
+    <!--{% if movie_trend %}
+
+    {% for i in movie_trend %}
+
+    {{i.movie_name}}
+
+    {% endfor %}
+
+    {% endif %}-->
+    {% endblock %} 
+</body>
+</html>
