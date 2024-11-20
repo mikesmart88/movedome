@@ -51,12 +51,13 @@
 
         <aside class="scrool_body" id="scrool">
             <aside class="scrool_to">
+
                 {% if movie_trend %}
                 {% for i in movie_trend %}
                 <a href="" style="text-decoration:none;color:#fff">
                     <aside class="image_older">
                         <div class="image">
-                            <img style="width:100%; height:100%;" src="{{i.frame.url}}" alt="">
+                            <img style="width:auto; height:100%;" src="{{i.frame.url}}" alt="">
                         </div>
                         <span class="caption">
                            {{i.movie_name}}
@@ -71,7 +72,11 @@
                 <a href="" style="text-decoration:none;color:#fff">
                     <aside class="image_older">
                         <div class="image">
+<<<<<<< HEAD
                             <img style="width:100%; height:100%;" src="{{i.frame.url}}" alt="">
+=======
+                            <img style="width:auto; height:100%;" src="{{i.frame.url}}" alt="">
+>>>>>>> fcdb4b8 (content pages)
                         </div>
                         <span class="caption">
                            {{i.series_name}}
@@ -80,6 +85,10 @@
                 </a>
                 {% endfor %}
                 {% endif %}
+<<<<<<< HEAD
+=======
+
+>>>>>>> fcdb4b8 (content pages)
             </aside>
         </aside>
 
@@ -88,6 +97,77 @@
       </div>
       </div>
 
+      <br>
+      <!-- movies section -->
+
+      <div class="movies">
+        <header>
+          <div class="headers"
+            style="display: flex; justify-content: center; height: 100%; align-items: center; text-shadow: 0px 0px 8px solid black;">
+            <h1>movies</h1>
+          </div>
+        </header>
+
+        <div class="movie-content">
+          {% if movies %}
+          {% for i in movies %}
+          <a href="" style="text-decoration: none;color:#fff;">
+            <aside class="movie_img_holder">
+              <div class="imag" style="border-radius: 10px; overflow:hidden;">
+                <img style="width:100%; height:100%;" src="{{i.frame.url}}" alt="">
+              </div>
+              <div class="captions">
+                {{i.movie_name}}
+              </div>
+            </aside>
+          </a>
+          <br>
+         
+          {% endfor %}
+          {% endif %}
+
+        </div>
+        <a href="" style="text-decoration: none; color:#000; width:100%; display:flex; align-items:center; justify-content:center;">
+          <aside class="mores">
+            More Movies
+          </aside>
+        </a>
+      </div>
+      <br>
+
+      <!-- series sect -->
+
+      <div class="movies">
+        <header>
+          <div class="headers"
+            style="display: flex; justify-content: center; height: 100%; align-items: center; text-shadow: 0px 0px 8px solid black;">
+            <h1>series</h1>
+          </div>
+        </header>
+
+        <div class="movie-content">
+          {% if series %}
+          {% for i in series %}
+          <a href="" style="text-decoration: none;color:#fff;">
+            <aside class="movie_img_holder">
+              <div class="imag" style="border-radius: 10px; overflow:hidden;">
+                <img style="width:100%; height:100%;" src="{{i.frame.url}}" alt="">
+              </div>
+              <div class="captions">
+                {{i.series_name}}
+              </div>
+            </aside>
+          </a>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <a href="" style="text-decoration: none; color:#000; width:100%; display:flex; align-items:center; justify-content:center;">
+          <aside class="mores">
+            More Series
+          </aside>
+        </a>
+      </div>
+      <br>
     {% endblock %} 
 </body>
 </html>

@@ -103,3 +103,137 @@ def nollyhood(request):
 
     return render(request, 'moviedomeapp/movies/nollywood.html', context=context)
 
+def action(request):
+
+    _series = series.objects.filter(series_type__iexact='Action').filter(is_published=True).order_by('-pub_date').all()
+
+    context = {
+        'serie': _series,
+    }
+
+    return render(request, 'moviedomeapp/series/action.html', context=context)
+
+def adven(request):
+
+    _series = series.objects.filter(series_type__iexact='Adventure').filter(is_published=True).order_by('-pub_date').all()
+
+    context = {
+        'serie': _series,
+    }
+
+    return render(request, 'moviedomeapp/series/adventure.html',context=context)
+
+def comedy(request):
+
+    _series = series.objects.filter(series_type__iexact='Comedy').filter(is_published=True).order_by('-pub_date').all()
+
+    context = {
+        'serie': _series,
+    }
+
+    return render(request, 'moviedomeapp/series/comedy.html',context=context)
+
+def hor(request):
+
+    _series = series.objects.filter(series_type__iexact='Horror').filter(is_published=True).order_by('-pub_date').all()
+
+    context = {
+        'serie': _series,
+    }
+
+    return render(request, 'moviedomeapp/series/horror.html',context=context)
+
+def sus(request):
+
+    _series = series.objects.filter(series_type__iexact='Suspense').filter(is_published=True).order_by('-pub_date').all()
+
+    context = {
+        'serie': _series,
+    }
+
+    return render(request, 'moviedomeapp/series/suspense.html',context=context)
+
+
+def genaction(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Action').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Action').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/action.html')
+
+def genadult(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Adult').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Adult').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/adult.html') 
+
+def genadven(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Adventure').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Adventure').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/adventure.html')
+
+def genanime(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Animation').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Animation').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/animation.html') 
+
+def gencomedy(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Comedy').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Comedy').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/comedy.html')
+
+def gencrime(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Crimes').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Crimes').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/crime.html')
+
+def gendocument(request):
+
+    _movies = movies.objects.filter(Genre__iexact='Documentary').filter(is_published=True).all()
+    _series = series.objects.filter(Genre__iexact='Documentary').filter(is_published=True).all()
+
+    context = {
+        'movies': _movies,
+        'series': _series,
+    }
+
+    return render(request, 'moviedomeapp/genres/documentary,html')

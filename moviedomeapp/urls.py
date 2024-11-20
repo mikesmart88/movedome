@@ -16,5 +16,18 @@ urlpatterns = [
    path('korean/', views.korean, name='korean movies'),
    path('Philipine/', views.philipin, name='philipin page'),
    path('nollyhood/', views.nollyhood, name='nollyhood pages'),
+
+   path('action/', views.action, name='action series'),
+   path('adventures/', views.adven, name='adventure series'),
+   path('comedy/', views.comedy, name='comedy series'),
+   path('horror/', views.hor, name='horror series',),
+   path('suspense/', views.sus, name='suspense series'),
    
+
+   path('genres/action/', views.genaction, name='genres action'),
+   path('genres/adult/', views.genadult, name='genres adult'),
+   path('genres/adventure/', views.genadven, name='genres adventure'),
+   path('genres/animation/', views.genanime, name='genres animation'),
+   path('genres/comedy/', views.gencrime, name='genres crime'),
+   path('genres/documemnt/', views.gendocument, name='genres ducumetation'),
 ]
